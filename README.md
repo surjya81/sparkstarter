@@ -14,5 +14,7 @@ To run Spark interactively through a modified version of the Scala shell.
 $ ./bin/spark-shell --master local[2]
 
 ##### Changes Required:
+        
+Class --> WordCount.java
 String logFile = "C:\\......\\sparkstarter\\src\\main\\resources\\spark_example.txt";
 Give absolute path for file ine src\main\resources\spark_example.txt
