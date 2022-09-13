@@ -13,10 +13,11 @@ public class WordCount {
 		SparkSession spark = SparkSession.builder().appName("Simple Application").master("local[2]").getOrCreate();
 
 		Dataset<String> logData = spark.read().textFile(logFile);
+		logData.show();
 		logData.printSchema();
 
 		long numAs = logData.filter((FilterFunction<String>) s -> s.contains("a")).count();
-		long numBs = logData.count();
+		long numBs = logData.filter((FilterFunction<String>) s -> s.contains("b")).count();
 		System.out.println("Lines with a: " + numAs + ", lines with b: " + numBs);
 
 		try {
