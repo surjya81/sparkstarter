@@ -17,4 +17,5 @@ $ ./bin/spark-shell --master local[2]
         
 Class : WordCount.java
 -->     String logFile = "C:\\......\\sparkstarter\\src\\main\\resources\\spark_example.txt";
+
         Give absolute path for file ine src\main\resources\spark_example.txt
